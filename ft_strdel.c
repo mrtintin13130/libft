@@ -6,7 +6,7 @@
 /*   By: mathomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 16:46:06 by mathomas          #+#    #+#             */
-/*   Updated: 2019/05/03 15:21:03 by mathomas         ###   ########.fr       */
+/*   Updated: 2019/05/12 12:29:12 by mathomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_strdel(char **as)
 {
-	if (as && *as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	ft_memdel((void**)as);
 }
