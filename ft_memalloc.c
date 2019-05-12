@@ -6,7 +6,7 @@
 /*   By: mathomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 15:46:42 by mathomas          #+#    #+#             */
-/*   Updated: 2019/05/12 12:41:53 by mathomas         ###   ########.fr       */
+/*   Updated: 2019/05/12 12:43:35 by mathomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	*ft_memalloc(size_t size)
 	mem = malloc(size);
 	if (mem == NULL)
 		return (NULL);
-	while (++i < size)
-		mem[i] = '\0';
+	ft_bzero(mem, size);
 	return (mem);
 }
